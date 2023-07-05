@@ -163,9 +163,9 @@ export default function SignUp() {
                                         label="Age"
 
                                     >
-                                        <MenuItem value={10}>Ten</MenuItem>
-                                        <MenuItem value={20}>Twenty</MenuItem>
-                                        <MenuItem value={30}>Thirty</MenuItem>
+                                        <MenuItem value={10}>Admin</MenuItem>
+                                        <MenuItem value={20}>Coordinator</MenuItem>
+                                        <MenuItem value={30}>Volunteer</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
