@@ -1,0 +1,101 @@
+.contentTopContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    display: block;
+    width: 25%;
+    min-width: 300px;
+    margin: 24px;
+    background: white;
+    box-shadow: 0 0 20px -10px;
+    min-height: 100px;
+    border-radius:  16px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    text-align: left;        
+}
+.card .upper, .poster .upper, .posts .upper{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    box-shadow: 0 3px 3px -3px #b1b1b1;
+}
+.card .lower{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    min-height: 80px;
+}
+.contentBottomContainer{
+    overflow: auto;
+    width: 100%;
+    margin: 16px 5%;
+    display:flex;
+    flex-direction: row;
+}
+
+.announcements{
+    display: block;
+    background: white;
+    box-shadow: 0 0 10px -5px;
+    margin: 32px;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.announcement {
+    padding: 16px 0;
+    box-shadow: 0 -3px 3px -5px;
+}
+.announcement .head{
+    display: inline;
+}
+.announcement .head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.announcement .head .title{
+    font-size: 16px;
+    font-weight: bold;
+}
+.postsContainer {
+    width: 50%;
+}
+.postsContainer .poster, .posts{
+    margin: 16px !important; 
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 0 10px -6px;
+    background-color: white;
+}
+.posts{
+    box-shadow: none;
+}
+.postsContainer .poster input, .postsContainer .poster textarea{
+    margin: 16px 0;
+}
+
+.posterInput{
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.posts .post div{
+}
+.post{
+    overflow: auto;
+    box-shadow: 0 0 10px -2px;
+    border-radius: 24px;
+    margin-top: 32px;
+    padding: 24px;
+    max-width: none!important;
+}
