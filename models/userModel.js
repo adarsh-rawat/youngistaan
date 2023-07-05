@@ -29,14 +29,17 @@ const userSchema = new mongoose.Schema({
     },
     role: {
       type: String,
-      default: "volunteer",
+      enum: ["admin", "coordinator", "volunteer"],
     },
     address: {
         type: String,
     },
     phone: String,
     bio: String,
-    organization: String,
+    organization: {
+      type: String,
+      enum: ["Isha", "Amogha", "Shakti", "Jwala"],
+    },
     work:{
         verified:[
             {

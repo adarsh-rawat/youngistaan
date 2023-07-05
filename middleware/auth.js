@@ -3,8 +3,8 @@ const catchAsyncError = require("./catchAsyncError");
 const jwt = require("jsonwebtoken");
 
 exports.validateUser = catchAsyncError( async(req, res, next) => {
-    const { token } = req.headers;
-    
+    let { token } = req.headers;
+    if(!token){ token = req.cookies.token }
     if (!token) {
       return next();
     }

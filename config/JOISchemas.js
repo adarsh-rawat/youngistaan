@@ -3,19 +3,38 @@ const joi = require("joi")
 const schemas = {
     userRegister: joi.object({
         name: joi.string().pattern(/^[a-zA-Z ]+$/).required(),
+        dateOfBirth: joi.date().required(),
         password: joi.string().min(4).max(255).required(),
         email: joi.string().email().required(),
         bio: joi.string().required(),
         address: joi.string().required(),
         role: joi.string().required(),
         phone: joi.string().pattern(/^[0-9]+$/).required(),
-        organization: joi.string().required(),
-        dateOfBirth: joi.date().required()
+        organization: joi.string(),
     }),
     loginDetails: joi.object({
         email: joi.string().email().required(),
         password: joi.string().required(),
     }),
+    createPost: joi.object({
+        title: joi.string().required(),
+        description: joi.string().required()
+    }),
+    createAnnouncement: joi.object({
+        title: joi.string().required(),
+        description: joi.string().required()
+    }),
+    postId: joi.object({
+        id: joi.string()
+    }),
+    createWork: joi.object({
+        category: joi.string().required(),
+        timeSpent: joi.number().min(1).required(),
+        startDate: joi.date().required(),
+        endDate: joi.date().required(),
+        description: joi.string().required(),
+        volunteerId: joi.string().required(),
+    })
     // myOrders: joi.object({
     //     page: joi.number().integer().min(1).default(1)
     // }),

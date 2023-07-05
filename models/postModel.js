@@ -4,9 +4,13 @@ const postSchema = new mongoose.Schema({
     title: String,
     description: String,
     createdBy: {
-        type: mongoose.Schema.ObjectId,
-        ref: "User"
-    }
+        id: {
+            type: mongoose.Schema.ObjectId,
+            ref: "User"
+        },
+        name: String,
+    },
+    verified: Boolean,
 })
 
 module.exports = mongoose.model("Post", postSchema)

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const workSchema = new mongoose.Schema({
     category: String,
-    TimeSpent: Number,
+    timeSpent: Number,
     startDate: Date,
     endDate: Date,
     description: String,
